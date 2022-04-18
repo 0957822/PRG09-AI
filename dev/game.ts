@@ -107,7 +107,9 @@ class Game {
         // AI needs to make a move if it is not the player's turn
         if (!this.playerTurn) {
             
+            setTimeout(() => { // wait for Gandalf before knights move.
             GameAI.moveKnight(this.king, this.knights, this.gameState);
+            }, 2000)
             this.playerTurn = true;
 
             // check lose
